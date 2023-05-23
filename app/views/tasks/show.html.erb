@@ -1,0 +1,15 @@
+<div class="container">
+
+<h1>Tasks Info</h1>
+
+<p>Title: <%= @task.title %> </p>
+<p>Details: <%= @task.details %> </p>
+<p>Completed: <%= @task.completed %> </p>
+
+<button type="button" class="btn btn-dark"> <%= link_to 'Delete', task_path(@task), data: { turbo_method: :delete, turbo_confirm: 'are you sure?' } %></button> |
+
+<button type="button" class="btn btn-dark"><%= link_to 'Back', tasks_path %> </button> |
+
+<button type="button" class="btn btn-dark"><%= link_to 'Update', task_edit_path(@task) %></button>
+
+</div>
